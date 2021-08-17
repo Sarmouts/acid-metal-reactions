@@ -59,19 +59,17 @@ int main()
 		{
 			if (x == z)
 			{
-
-
-
+				result = "2H" + to_string(x) + Y + to_string(y) + " + " + "2" + X + " --> 2" + X + Y + " + " + to_string(x) + "H2";
 				cout << replace(result) << endl;
 				cout << "=======================================================================" << endl;
-			}//2 HxYy + 2 X --> 2 XxYz + z H2
+			}//2 HxYy + 2 X --> 2 XY + x H2
+			//x==y
 			else
 			{
-
-
+				result = to_string(2 * z) + "H" + to_string(x) + Y + to_string(y) + " + " + to_string(2 * x) + X + " --> 2" + X + to_string(x) + Y + to_string(z) + " + " + to_string(z * x) + "H2";
 				cout << replace(result) << endl;
 				cout << "=======================================================================" << endl;
-			}//2*z HxYy + 2*x X --> 2 XxYz + z H2
+			}//2*z HxYy + 2*x X --> 2 XxYz + z*x H2
 		}
 	}
 }
