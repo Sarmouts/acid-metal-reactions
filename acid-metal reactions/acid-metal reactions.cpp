@@ -63,7 +63,6 @@ int main()
 				cout << replace(result) << endl;
 				cout << "=======================================================================" << endl;
 			}//2 HxYy + 2 X --> 2 XY + x H2
-			//x==y
 			else
 			{
 				result = to_string(2 * z) + "H" + to_string(x) + Y + to_string(y) + " + " + to_string(2 * x) + X + " --> 2" + X + to_string(x) + Y + to_string(z) + " + " + to_string(z * x) + "H2";
