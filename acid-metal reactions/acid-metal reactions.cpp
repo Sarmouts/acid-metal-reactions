@@ -35,12 +35,12 @@ int main()
 		cin >> X;
 		cout << "Enter z (ex 1,2,3)" << endl;
 		cin >> z;
-		if (x <= 0 || y <= 0)
+		if (x <= 0 || y <= 0 || z <= 0)
 		{
 			cout << "Please enter a valid value" << endl;
 			cout << "=======================================================================" << endl;
 		}
-		else if (x > 3)
+		else if (x > 3 || z > 3)
 		{
 			cout << "The value x cannot be more than 3" << endl;
 			cout << "=======================================================================" << endl;
