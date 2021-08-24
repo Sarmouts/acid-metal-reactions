@@ -42,12 +42,12 @@ int main()
 		}
 		else if (x > 3 || z > 3)
 		{
-			cout << "The value x cannot be more than 3" << endl;
+			cout << "The value of x or z cannot be more than 3" << endl;
 			cout << "=======================================================================" << endl;
 		}
 		else if (y > 1)
 		{
-			cout << "The value y cannot be more or less than 1" << endl;
+			cout << "The value y cannot be more than 1" << endl;
 			cout << "=======================================================================" << endl;
 		}
 		else if (X == "Cu" || X == "Ag" || X == "Au" || X == "Pt" || X == "cu" || X == "ag" || X == "au" || X == "pt")
