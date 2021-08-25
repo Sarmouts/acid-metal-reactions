@@ -53,33 +53,33 @@ int main()
 			if (x == z)
 			{
 				if (x == 2)
-				{
+				{//HxY + X --> XY + H2
 					result = "H" + to_string(x) + Y + " + " + X + " --> " + X + Y + " + " + "H2";
 					cout << replace(result) << endl;
 					cout << "=======================================================================" << endl;
-				}//HxY + X --> XY + H2
+				}
 				else
-				{
+				{//2 HxY + 2 X --> 2 XY + x H2
 					result = "2H" + to_string(x) + Y + " + " + "2" + X + " --> 2" + X + Y + " + " + to_string(x) + "H2";
 					cout << replace(result) << endl;
 					cout << "=======================================================================" << endl;
 				}
-			}//2 HxY + 2 X --> 2 XY + x H2
+			}
 			else
 			{
 				if (x == 2)
-				{
+				{//z HxY + x X --> XxYz + z H2
 					result = to_string(z) + "H" + to_string(x) + Y + " + " + to_string(x) + X + " --> " + X + to_string(x) + Y + to_string(z) + " + " + to_string(z) + "H2";
 					cout << replace(result) << endl;
 					cout << "=======================================================================" << endl;
-				}//z HxY + x X --> XxYz + z H2
+				}
 				else
-				{
+				{//2*z HxY + 2*x X --> 2 XxYz + z*x H2
 					result = to_string(2 * z) + "H" + to_string(x) + Y + " + " + to_string(2 * x) + X + " --> 2" + X + to_string(x) + Y + to_string(z) + " + " + to_string(z * x) + "H2";
 					cout << replace(result) << endl;
 					cout << "=======================================================================" << endl;
 				}
-			}//2*z HxY + 2*x X --> 2 XxYz + z*x H2
+			}
 		}
 	}
 }
