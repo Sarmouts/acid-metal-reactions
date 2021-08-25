@@ -23,19 +23,17 @@ int main()
 	while (true)
 	{
 		string X, Y, result;
-		int x, y, z;
-		cout << "HxYy + X^+z" << endl;
+		int x, z;
+		cout << "HxY + X^+z" << endl;
 		cout << "Enter x" << endl;
 		cin >> x;
 		cout << "Enter Element Y(non-metal)" << endl;
 		cin >> Y;
-		cout << "Enter y" << endl;
-		cin >> y;
 		cout << "Enter Element X(metal)" << endl;
 		cin >> X;
 		cout << "Enter z (ex 1,2,3)" << endl;
 		cin >> z;
-		if (x <= 0 || y <= 0 || z <= 0)
+		if (x <= 0 || z <= 0)
 		{
 			cout << "Please enter a valid value" << endl;
 			cout << "=======================================================================" << endl;
@@ -43,11 +41,6 @@ int main()
 		else if (x > 3 || z > 3)
 		{
 			cout << "The value of x or z cannot be more than 3" << endl;
-			cout << "=======================================================================" << endl;
-		}
-		else if (y > 1)
-		{
-			cout << "The value y cannot be more than 1" << endl;
 			cout << "=======================================================================" << endl;
 		}
 		else if (X == "Cu" || X == "Ag" || X == "Au" || X == "Pt" || X == "cu" || X == "ag" || X == "au" || X == "pt")
@@ -59,16 +52,16 @@ int main()
 		{
 			if (x == z)
 			{
-				result = "2H" + to_string(x) + Y + to_string(y) + " + " + "2" + X + " --> 2" + X + Y + " + " + to_string(x) + "H2";
+				result = "2H" + to_string(x) + Y + " + " + "2" + X + " --> 2" + X + Y + " + " + to_string(x) + "H2";
 				cout << replace(result) << endl;
 				cout << "=======================================================================" << endl;
-			}//2 HxYy + 2 X --> 2 XY + x H2
+			}//2 HxY + 2 X --> 2 XY + x H2
 			else
 			{
-				result = to_string(2 * z) + "H" + to_string(x) + Y + to_string(y) + " + " + to_string(2 * x) + X + " --> 2" + X + to_string(x) + Y + to_string(z) + " + " + to_string(z * x) + "H2";
+				result = to_string(2 * z) + "H" + to_string(x) + Y + " + " + to_string(2 * x) + X + " --> 2" + X + to_string(x) + Y + to_string(z) + " + " + to_string(z * x) + "H2";
 				cout << replace(result) << endl;
 				cout << "=======================================================================" << endl;
-			}//2*z HxYy + 2*x X --> 2 XxYz + z*x H2
+			}//2*z HxY + 2*x X --> 2 XxYz + z*x H2
 		}
 	}
 }
