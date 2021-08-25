@@ -16,6 +16,15 @@ string replace(string str)
 	}
 	return final;
 }
+string parenthesis(string str, int v)
+{
+	string final = "(" + str + ")";
+	if (str.length() != 3 || v == 1)
+	{
+		return str;
+	}
+	return final;
+}
 int main()
 {
 	cout << "Welcome to MathFlare's early access acid-metal reaction calculator" << endl;
@@ -69,13 +78,13 @@ int main()
 			{
 				if (x == 2)
 				{//z HxY + x X --> XxYz + z H2
-					result = to_string(z) + "H" + to_string(x) + Y + " + " + to_string(x) + X + " --> " + X + to_string(x) + Y + to_string(z) + " + " + to_string(z) + "H2";
+					result = to_string(z) + "H" + to_string(x) + Y + " + " + to_string(x) + X + " --> " + X + to_string(x) + parenthesis(Y, z) + to_string(z) + " + " + to_string(z) + "H2";
 					cout << replace(result) << endl;
 					cout << "=======================================================================" << endl;
 				}
 				else
 				{//2*z HxY + 2*x X --> 2 XxYz + z*x H2
-					result = to_string(2 * z) + "H" + to_string(x) + Y + " + " + to_string(2 * x) + X + " --> 2" + X + to_string(x) + Y + to_string(z) + " + " + to_string(z * x) + "H2";
+					result = to_string(2 * z) + "H" + to_string(x) + Y + " + " + to_string(2 * x) + X + " --> 2" + X + to_string(x) + parenthesis(Y, z) + to_string(z) + " + " + to_string(z * x) + "H2";
 					cout << replace(result) << endl;
 					cout << "=======================================================================" << endl;
 				}
